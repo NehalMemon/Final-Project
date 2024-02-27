@@ -1,0 +1,282 @@
+[
+  {
+    "NAME": "B6",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2013,
+    "WEIGHT": 800,
+    "GUN PRICE": 95000
+  },
+  {
+    "NAME": "P8 L",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 1990,
+    "WEIGHT": 1075,
+    "GUN PRICE": 150000
+  },
+  {
+    "NAME": "K12 SPORT",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2010,
+    "WEIGHT": 1330,
+    "GUN PRICE": 200000
+  },
+  {
+    "NAME": "K2 45",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2000,
+    "WEIGHT": 1140,
+    "GUN PRICE": 130000
+  },
+  {
+    "NAME": "SR 38",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2021,
+    "WEIGHT": 1330,
+    "GUN PRICE": 100000
+  },
+  {
+    "NAME": "REMINGTON 1100",
+    "TYPE": "Shotgun",
+    "MANUFACTURE YEAR": 1950,
+    "WEIGHT": 3685,
+    "GUN PRICE": 250000
+  },
+  {
+    "NAME": "MOSSBERG 500",
+    "TYPE": "Shotgun",
+    "MANUFACTURE YEAR": 1960,
+    "WEIGHT": 3175,
+    "GUN PRICE": 115000
+  },
+  {
+    "NAME": "BENELLI VINCI",
+    "TYPE": "Shotgun",
+    "MANUFACTURE YEAR": 2009,
+    "WEIGHT": 195,
+    "GUN PRICE": 390000
+  },
+  {
+    "NAME": "RUGER RED LABEL",
+    "TYPE": "Shotgun",
+    "MANUFACTURE YEAR": 2013,
+    "WEIGHT": 3174,
+    "GUN PRICE": 625000
+  },
+  {
+    "NAME": "BERETTA 1301",
+    "TYPE": "Shotgun",
+    "MANUFACTURE YEAR": 2013,
+    "WEIGHT": 453,
+    "GUN PRICE": 350000
+  },
+  {
+    "NAME": "DANIEL DEFENSE MK18",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 2000,
+    "WEIGHT": 2664,
+    "GUN PRICE": 530000
+  },
+  {
+    "NAME": "AR-57",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 1957,
+    "WEIGHT": 3000,
+    "GUN PRICE": 249000
+  },
+  {
+    "NAME": "M4 CARBINE",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 1980,
+    "WEIGHT": 2880,
+    "GUN PRICE": 195000
+  },
+  {
+    "NAME": "AK-74",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 1974,
+    "WEIGHT": 3030,
+    "GUN PRICE": 110000
+  },
+  {
+    "NAME": "FN SCAR",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 2004,
+    "WEIGHT": 3500,
+    "GUN PRICE": 550000
+  },
+  {
+    "NAME": "BARRETT M82",
+    "TYPE": "Sniper Rifle",
+    "MANUFACTURE YEAR": 1980,
+    "WEIGHT": 13.5,
+    "GUN PRICE": 2450000
+  },
+  {
+    "NAME": "M24 SNIPER",
+    "TYPE": "Sniper Rifle",
+    "MANUFACTURE YEAR": 1988,
+    "WEIGHT": 5.4,
+    "GUN PRICE": 690000
+  },
+  {
+    "NAME": "BARRETT M99",
+    "TYPE": "Sniper Rifle",
+    "MANUFACTURE YEAR": 1999,
+    "WEIGHT": 10.0,
+    "GUN PRICE": 2200000
+  },
+  {
+    "NAME": "SVD",
+    "TYPE": "Sniper Rifle",
+    "MANUFACTURE YEAR": 1958,
+    "WEIGHT": 5.3,
+    "GUN PRICE": 1550000
+  },
+  {
+    "NAME": "McMillian TAC-50",
+    "TYPE": "Sniper Rifle",
+    "MANUFACTURE YEAR": 1983,
+    "WEIGHT": 11.8,
+    "GUN PRICE": 1380000
+  },
+  {
+    "NAME": "MP40",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1938,
+    "WEIGHT": 3970.0,
+    "GUN PRICE": 105000
+  },
+  {
+    "NAME": "SCORPION EVO 3",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 2009,
+    "WEIGHT": 2770.0,
+    "GUN PRICE": 220000
+  },
+  {
+    "NAME": "AR-57",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 2008,
+    "WEIGHT": 3400.0,
+    "GUN PRICE": 310000
+  },
+  {
+    "NAME": "ASMI",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 2020,
+    "WEIGHT": 2000,
+    "GUN PRICE": 180000
+  },
+  {
+    "NAME": "BERETTA M12",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1950,
+    "WEIGHT": 3000.0,
+    "GUN PRICE": 150000
+  },
+  {
+    "NAME": "AR-15",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 1950,
+    "WEIGHT": 3175,
+    "GUN PRICE": 420000
+  },
+  {
+    "NAME": "SMITH",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 2016,
+    "WEIGHT": 2948,
+    "GUN PRICE": 150000
+  },
+  {
+    "NAME": "COLT LE6920",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 1990,
+    "WEIGHT": 2948,
+    "GUN PRICE": 220000
+  },
+  {
+    "NAME": "RUGER AR-556",
+    "TYPE": "AR Rifle",
+    "MANUFACTURE YEAR": 2009,
+    "WEIGHT": 2948,
+    "GUN PRICE": 200000
+  },
+  {
+    "NAME": "KOCH MP5",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1966,
+    "WEIGHT": 3100,
+    "GUN PRICE": 830000
+  },
+  {
+    "NAME": "FN P90",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1990,
+    "WEIGHT": 2600,
+    "GUN PRICE": 690000
+  },
+  {
+    "NAME": "UZI",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1950,
+    "WEIGHT": 3500,
+    "GUN PRICE": 420000
+  },
+  {
+    "NAME": "KOCH UMP",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1990,
+    "WEIGHT": 2100,
+    "GUN PRICE": 560000
+  },
+  {
+    "NAME": "INGRAM MAC-10",
+    "TYPE": "SMG",
+    "MANUFACTURE YEAR": 1970,
+    "WEIGHT": 3000,
+    "GUN PRICE": 250000
+  },
+  {
+    "NAME": "GLOCK 19 GEN5",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2017,
+    "WEIGHT": 670,
+    "GUN PRICE": 150000
+  },
+  {
+    "NAME": "SMITH",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2018,
+    "WEIGHT": 657,
+    "GUN PRICE": 120000
+  },
+  {
+    "NAME": "SIG SAUER P320 COMPACT",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2014,
+    "WEIGHT": 730,
+    "GUN PRICE": 180000
+  },
+  {
+    "NAME": "BERETTA 92FS",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 1983,
+    "WEIGHT": 940,
+    "GUN PRICE": 190000
+  },
+  {
+    "NAME": "SPRINGFIELD ARMORY XD-S MOD.2",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 2018,
+    "WEIGHT": 600,
+    "GUN PRICE": 140000
+  },
+  {
+    "NAME": "bla bla",
+    "TYPE": "Handgun",
+    "MANUFACTURE YEAR": 1945,
+    "WEIGHT": 2000.0,
+    "GUN PRICE": 100000
+  }
+]
