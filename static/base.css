@@ -1,0 +1,186 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Base styling for header and navigation */
+.navbar {
+    background-color: #3e4a9a; /* Darker shade for the navbar */
+    padding: 10px 0; /* Adjust if needed */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo styling */
+.logo img {
+    max-height: 50px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-right: 40px;
+    margin-left: auto; /* Push links to the right */
+}
+
+.nav-links li {
+    margin-left: 30px; /* Increased spacing between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+    color: #f1f1f1;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.nav-links .active a {
+    background-color: rgba(241, 241, 241, 0.3); /* Active state effect */
+    color: #f1f1f1;
+    border-bottom: 2px solid #f1f1f1; /* Active underline */
+}
+
+/* Buttons styling */
+/* Button Styling */
+.auth-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    padding-right: 0px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text color */
+    border: 2px solid #4a5bb0; /* Border color */
+}
+
+.login-btn:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Signup Button */
+.signup-btn {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: 2px solid #388e3c; /* Darker green border */
+}
+
+.signup-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; /* Reset for mobile */
+    }
+
+    .buttons {
+        margin-top: 10px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2b3a67;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    margin: 0;
+}
+
+footer .footer-content {
+    margin-bottom: 20px;
+}
+
+/* Sponsors Section inside Footer */
+footer .sponsors {
+    margin-top: 10px;
+}
+
+footer .sponsors-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+footer .sponsor-logo {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+footer .sponsor-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Sticky Footer Handling */
+.content {
+    min-height: calc(100vh - 150px); /* Adjust this value based on your header and footer heights */
+    padding: 80px 20px 70px; /* Ensure top padding is equal to or greater than header height */
+    box-sizing: border-box; /* Include padding in total height calculation */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    footer .sponsors-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .sponsor-logo {
+        max-width: 80px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo linking to homepage -->
+            <a href="{% url 'home' %}" class="logo">
+                <img src="{% static 'images/poll_image.png' %}" alt="Logo" />
+            </a>
+    
+            <!-- Navbar links -->
+            <ul class="nav-links">
+                <li class="{% if request.path == '/home/' %}active{% endif %}"><a href="{% url 'home' %}">Home</a></li>
+                <li class="{% if request.path == '/vote/' %}active{% endif %}"><a href="{% url 'vote' %}">Vote</a></li>
+                <li class="{% if request.path == '/result/' %}active{% endif %} "><a href="{% url 'result' %}">Result</a></li>
+            </ul>
+    
+            <!-- Login and Signup buttons -->
+            <div class="auth-buttons">
+                <a href="#" class="btn login-btn">Login</a>
+                <a href="#" class="btn signup-btn">Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Your Company</p>
+        </div>
+        
+        <div class="sponsors">
+            <h2>Our Sponsors</h2>
+            <div class="sponsors-container">
+                <a href="#" target="_blank">
+                    <img src="{% static 'images/sponsor1.png' %}" alt="Sponsor 1" class="sponsor-logo">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="{% static 'images/sponsor2.png' %}" alt="Sponsor 2" class="sponsor-logo">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="{% static 'images/sponsor3.png' %}" alt="Sponsor 3" class="sponsor-logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+  
+</body>
+</html>

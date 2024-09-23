@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}N & M Polling Site{% endblock %}
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+{% load static %}
+    <div class="options-container">
+        {% for n in data %}
+        <div class="option-block">
+            {% if n.image %}
+                <img src="{{ n.image.url }}" alt="{{ n.name }} Image">
+            {% else %}
+                <img src="{% static 'images/default.jpg' %}" alt="Default Image">
+            {% endif %}
+            <h3>{{ n.name }}</h3>
+            <h2>ID:{{ n.id }}</h2>
+            <p>{{ n.dis1 | safe }}</p>
+            <a href="/detail-page/{{n.slugs}}">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Voting page{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'vote.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="form-container">
+        <h1>Product Form</h1>
+        {% csrf_token %}
+        <form action="" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          {% csrf_token %}
+            <label for="id_select">Choose an ID:</label>
+            <select name="id" id="id">
+              <option value="{% url 'result' %}">select</option>
+              {% for n in data %}
+                <option value="{{ n.id }}">{{ n.id }}</option>
+              {% endfor %}
+            </select> 
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}
+

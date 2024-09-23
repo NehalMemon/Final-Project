@@ -1,0 +1,87 @@
+/* Overall page and container styling */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Each option block styling */
+.option-block {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f9;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Image on the left side */
+.option-block img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Text content inside the option block */
+.option-block h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2b3a67;
+}
+
+.option-block p {
+    font-size: 1.1em;
+    color: #555555;
+    flex-grow: 1;
+}
+
+/* ID in the top-right corner */
+.option-block h2 {
+    font-size: 1.2em;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ff4c60;
+    font-weight: bold;
+}
+
+/* Read More link */
+.option-block a {
+    color: #5c6bc0;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.option-block a:hover {
+    color: #3949ab;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .option-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .option-block img {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .option-block h2 {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}

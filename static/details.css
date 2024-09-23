@@ -1,0 +1,49 @@
+/* Details Page Container */
+.details-container {
+    padding: 80px 20px; /* Add padding to avoid overlap with header */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: auto; /* Center the container */
+}
+
+/* Image Styling */
+.detail-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+/* Text Styling */
+.note {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #555; /* Grey color for note */
+}
+
+.detail-name {
+    font-size: 1.5em; /* Larger font size for the name */
+    margin: 10px 0;
+}
+
+.detail-id {
+    font-size: 1.2em; /* Slightly smaller for ID */
+    margin: 10px 0;
+    color: #007bff; /* Blue color for ID */
+}
+
+/* Button Styling */
+.buttons {
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.btn {
+    background-color: #ff4c60; /* Button background color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e63946; /* Darker shade on hover */
+}

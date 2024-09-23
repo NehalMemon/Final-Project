@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Details page{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'details.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="details-container">
+    <img src="{{ data.image.url }}" alt="{{ data.name }} Image" class="detail-image">
+    <p class="note">Note: please remember the ID of the product you want to vote.</p>
+    <h3 class="detail-name">{{ data.name }}</h3>
+    <h2 class="detail-id">ID: {{ data.id }}</h2>
+    <div class="detail-description">
+        <p>{{ data.dis2 | safe }}</p>
+    </div>
+    <div class="buttons">
+        <a href="{% url 'vote' %}" class="btn vote-btn">Vote</a>
+    </div>
+</div>
+{% endblock %}
