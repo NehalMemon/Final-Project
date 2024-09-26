@@ -1,11 +1,12 @@
-
 html, body {
     margin: 0;
     padding: 0;
     width: 100%; /* Ensure full width */
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
-
 
 /* Base styling for header and navigation */
 .navbar {
@@ -68,7 +69,6 @@ html, body {
 }
 
 /* Buttons styling */
-/* Button Styling */
 .auth-buttons {
     display: flex;
     gap: 15px; /* Space between buttons */
@@ -107,44 +107,24 @@ html, body {
     transform: translateY(-2px); /* Lift effect */
 }
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0; /* Reset for mobile */
-    }
-
-    .buttons {
-        margin-top: 10px;
-    }
-}
-
 /* Footer Styling */
 footer {
     background-color: #2b3a67;
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
     width: 100%;
-    bottom: 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     font-size: 0.9em;
     margin: 0;
+    position: relative;
 }
 
+/* Sponsors Section inside Footer */
 footer .footer-content {
     margin-bottom: 20px;
 }
 
-/* Sponsors Section inside Footer */
 footer .sponsors {
     margin-top: 10px;
 }
@@ -166,15 +146,30 @@ footer .sponsor-logo:hover {
     transform: scale(1.1);
 }
 
-/* Sticky Footer Handling */
+/* Content Styling */
 .content {
-    min-height: calc(100vh - 150px); /* Adjust this value based on your header and footer heights */
-    padding: 80px 20px 70px; /* Ensure top padding is equal to or greater than header height */
+    flex: 1; /* Ensures the content takes up the remaining height */
+    padding: 80px 20px; /* Adjust top padding to account for fixed header */
     box-sizing: border-box; /* Include padding in total height calculation */
 }
 
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; /* Reset for mobile */
+    }
+
+    .buttons {
+        margin-top: 10px;
+    }
+
     footer .sponsors-container {
         flex-direction: column;
         align-items: center;
