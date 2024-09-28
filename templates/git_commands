@@ -1,0 +1,56 @@
+(Initialize a new Git repository)
+    git init
+
+
+(Add a remote repository)
+    git remote add origin <repository_url>
+
+
+
+(Create and switch to a new branch)
+    git checkout -b new-branch-name
+
+(Switch back to an existing branch)
+    git checkout existing-branch-name
+
+(Stage all changes)
+    git add .
+
+(Commit changes with a message)
+git commit -m "Your commit message"
+
+(Push changes to an existing branch)
+    git push origin existing-branch-name
+
+(Push a new branch to the remote repository)
+    git push origin new-branch-name
+
+
+(View current branches)
+    git branch
+
+(View remote repositories)
+    git remote -v
+
+(View the status of the working directory)
+    git status
+
+(Switch to the branch you want to merge into (e.g., master) )
+    git checkout master
+
+(Merge changes from another branch (e.g., feature-branch) )
+    git merge feature-branch
+
+
+to copy the code from github repository 
+
+create a folder where you want the code
+1-git clone <repository_url>
+Replace <repository_url> with the URL of the repository you want to clone (e.g., https://github.com/NehalMemon/Final-Project.git).
+
+2-cd <repository_name>
+Replace <repository_name> with the name of the cloned repository.
+
+    
+
+

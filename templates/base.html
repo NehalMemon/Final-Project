@@ -30,32 +30,34 @@
             </div>
         </div>
     </nav>
-<main>
-    <div class="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-</main>
+
+    <div class="wrapper">
+        <main>
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
     
     <footer>
-        <div class="footer-content">
-            <p>© 2024 Your Company</p>
-        </div>
-        
         <div class="sponsors">
             <h2>Our Sponsors</h2>
             <div class="sponsors-container">
                 <a href="#" target="_blank">
-                    <img src="{% static 'images/sponsor1.png' %}" alt="Sponsor 1" class="sponsor-logo">
+                    <img src="{% static 'images/google.png' %}" alt="Sponsor 1"  id=logo1>
                 </a>
                 <a href="#" target="_blank">
-                    <img src="{% static 'images/sponsor2.png' %}" alt="Sponsor 2" class="sponsor-logo">
+                    <img src="{% static 'images/whatsapp.png' %}" alt="Sponsor 2" class="sponsor-logo" id=logo2>
                 </a>
                 <a href="#" target="_blank">
-                    <img src="{% static 'images/sponsor3.png' %}" alt="Sponsor 3" class="sponsor-logo">
+                    <img src="{% static 'images/instagram.png' %}" alt="Sponsor 3" class="sponsor-logo" id=logo3>
                 </a>
             </div>
         </div>
+        <div class="footer-content">
+            <p>© 2024 Your Company</p>
+        </div>
+        
     </footer>
     
   
