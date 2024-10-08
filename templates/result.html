@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}Result page{% endblock %}
+{% block title %}Result Page{% endblock %}
 
 {% block extra_css %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'result.css' %}">
 {% endblock %}
-
 
 {% block content %}
 <h1>Poll Results</h1>
@@ -20,11 +19,10 @@
 
   {% for n in polls %}
     <tr>
-      <td>{{n.id}}</td>
-      <td>{{ n.name}}</td>
+      <td>{{ n.id }}</td>
+      <td>{{ n.name }}</td>
       <td>{{ n.count }}</td>
     </tr>
   {% endfor %}
 </table>
-
 {% endblock %}

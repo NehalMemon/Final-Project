@@ -1,49 +1,199 @@
-/* Details Page Container */
-.details-container {
-    padding: 80px 20px; /* Add padding to avoid overlap with header */
-    max-width: 800px; /* Limit the width for better readability */
-    margin: auto; /* Center the container */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #b6cfd0;
 }
 
-/* Image Styling */
-.detail-image {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Add rounded corners */
-}
-
-/* Text Styling */
 .note {
+    background-color: #184375; /* Match the option block's dark background */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
     font-size: 1em;
-    margin: 10px 0;
-    color: #555; /* Grey color for note */
+    text-align: center;
 }
 
+
+
+.note p {
+    margin: 0;
+    color: #ffffff; /* Regular note text */
+    font-size: 1em;
+    
+}
+/* General container styling with a dark background */
+.details-container {
+    padding: 20px 92px;
+    color: #333333;
+    font-size: 1.0 em; /* Slightly larger font size */
+    font-family: 'Montserrat', sans-serif; /* Stylish and decent font */
+    line-height: 1.6; /* Good line spacing for readability */
+    margin-top: 20px; /* Space between the image and the description text */
+    text-align: justify; /* For even alignment and better readability */
+    margin-left:10px;
+    font-weight: bold;
+
+}
+/* Styling for the main description section */
+.overall-description {
+    margin-bottom: 40px;
+}
+
+/* Adjust the images */
+.detail-image {
+    width: 100%; /* Full-width */
+    height: 300px;
+    max-width: 500px;
+    margin: 0 auto; /* Center the main image */
+    display: block; /* Ensure it's centered */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-blend-mode: multiply;
+}
+/* Styling for the name */
 .detail-name {
-    font-size: 1.5em; /* Larger font size for the name */
-    margin: 10px 0;
+    font-size: 2.1em;               /* Larger font size for emphasis */
+    font-weight: bolder;            /* Bold to make the name stand out */
+    color: #FFC300;               /* White text */
+    text-align: center;           /* Center the name */
+    margin-bottom: 10px;          /* Space below the name */
+    text-transform: capitalize;   /* Capitalize the name */
 }
 
+/* Styling for the ID */
 .detail-id {
-    font-size: 1.2em; /* Slightly smaller for ID */
-    margin: 10px 0;
-    color: #007bff; /* Blue color for ID */
+    font-size: 1.6em;             /* Slightly smaller than the name */
+    font-weight: normal;          /* Regular weight for the ID */
+    color: #FFC300;               /* Light grey color to differentiate from the name */
+    text-align: center;           /* Center the ID */
+    margin-bottom: 20px;          /* Space below the ID */
 }
 
-/* Button Styling */
-.buttons {
-    margin-top: 20px; /* Space above the buttons */
+
+/* Container for the exterior and interior sections */
+.exterior-description,
+.interior-description {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically inside each section */
+    align-items: center; /* Center align the images horizontally */
+    margin-bottom: 40px; /* Add some space below each section */
 }
 
-.btn {
-    background-color: #ff4c60; /* Button background color */
-    color: white;
-    padding: 10px 15px;
+/* Image styling to make them side by side */
+
+
+/* The wrapper class for images to display them side by side */
+
+.image-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 1100px;
+    height: 350px;
+}
+
+/* Adjust the size of images in the image group */
+.image-group img {
+    width: 48%;                 /* Set width to 48% to keep images side by side */
+    height: auto;               /* Maintain aspect ratio */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    background-blend-mode: multiply;/* Optional shadow for depth */
+}
+
+
+/* Ensure the text is centered below the images */
+.exterior-description p,
+.interior-description p {
+    margin-top: -20px;
+    width: 100%;
+}
+.description-text p {
+    font-size: 1.1em; /* Slightly larger font size */
+    font-family: 'Montserrat', sans-serif; /* Stylish and decent font */
+    color: #e4c30c; /* White text for dark backgrounds */
+    line-height: 1.6; /* Good line spacing for readability */
+    margin-top: 20px; /* Space between the image and the description text */
+    text-align: justify; /* For even alignment and better readability */
+    margin-left:10px;
+}
+
+/* Ensure adequate space between description text blocks */
+.description-text p {
+    margin-bottom: 20px; /* Space after each paragraph */
+}
+
+
+
+/* Space between images and text */
+.exterior-description,
+.interior-description {
+    margin-bottom: 40px; /* Space between text and images */
+    gap: 30px; /* Space between the images */
+}
+
+/* Adjust size and spacing of the image group for larger images */
+.image-group img {
+    width: 48%; /* Make each image 48% width so they sit side by side */
+    height: auto;
+    margin-bottom: 20px; /* Space between image and the text beneath */
+    border-radius: 10px; /* Rounded corners for the images */
+}
+
+/* Ensure spacing between text and images */
+.image-group {
+    margin-bottom: 30px; /* Space between the image group and the next section */
+}
+
+/* Voting button styling */
+/* Container for the statement and button */
+/* Container for the statement and button */
+/* Container for the statement and button */
+.statement-button {
+    display: flex;  /* Flexbox for horizontal alignment */
+    align-items: center;  /* Vertically aligns the button with the statement */
+    gap: 10px;  /* Adds spacing between the statement and the button */
+    margin-top: 20px;
+}
+
+/* Styling for the statement */
+.statement {
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;  /* Stylish font */
+    color: #333333;
+    margin: 0;
+}
+
+/* Vote button styling */
+.vote-btn {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #e63946; /* Darker shade on hover */
+.vote-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Custom header and footer styling for the detail page */
+header {
+
+    background-color: rgba(0, 0, 0, 0.7); /* Less transparent header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+
+    background-color: #000000; /* Dark footer with no changes */
+    color: #ffffff;
 }

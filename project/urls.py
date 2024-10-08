@@ -24,7 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.home, name='home'),
     path('vote/', views.vote, name='vote'),  
-
     path('result/', views.result, name='result'),
     path('detail-page/<slug>', views.details, name='details'),
 ]

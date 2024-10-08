@@ -3,26 +3,27 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
+    background-color: #b6cfd0; /* Adjust to your preferred background color */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    flex-direction: column; /* Use column direction for header, content, footer */
+    min-height: 100vh; /* Ensure the body takes full height */
 }
 
 /* Form container styling */
 .form-container {
-    background-color: #ffffff;
+    background-color: #333; /* Darker background color for the form */
+    color: #ffffff; /* Change text color to white for contrast */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 500px; /* Increase the width for a larger form */
     width: 100%;
+    margin: 80px auto; /* Center form container and add margin to push it down */
     text-align: center;
 }
 
 h1 {
-    color: #333;
+    color: #ffeb3b; /* Bright color for heading for better visibility */
     margin-bottom: 20px;
     font-size: 1.8em;
     font-weight: 600;
@@ -37,7 +38,7 @@ form {
 label {
     font-size: 1.1em;
     margin: 10px 0 5px;
-    color: #4a4a4a;
+    color: #d3d3d3; /* Bright color for labels for visibility */
     text-align: left;
 }
 
@@ -51,6 +52,8 @@ select {
     font-size: 1em;
     width: 100%;
     box-sizing: border-box;
+    background-color: #444; /* Darker background for inputs */
+    color: #ffffff; /* White text color for inputs */
 }
 
 input[type="text"]:focus,
@@ -61,10 +64,19 @@ select:focus {
     box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
 }
 
+/* Styling the dropdown selection menu */
+select {
+    appearance: none; /* Remove default styling */
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"%3E%3Cpolygon fill="%23ffffff" points="0,0 10,0 5,5"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 10px; /* Size of the arrow */
+}
+
 /* Button styling */
 button {
     padding: 12px 20px;
-    background-color: #5c6bc0;
+    background-color: #333c73;
     color: white;
     font-size: 1.1em;
     border: none;
@@ -76,6 +88,40 @@ button {
 
 button:hover {
     background-color: #4a5bb0;
+}
+
+/* Header styling */
+.navbar {
+
+    padding: 5px 0; /* Thinner navbar */
+    width: 100%;
+    z-index: 1000; /* Ensure it is on top of other elements */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    left: 0; /* Full-width navbar */
+   
+}
+
+/* Footer styling */
+footer {
+    background-color: #000000; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adjust padding for a thinner footer */
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 0.8em; /* Font size */
+    margin: 0;
+    position: relative; /* Allow it to flow with the document */
+}
+
+/* Ensure this is set on the main container of your layout */
+.container {
+    display: flex;
+    flex-direction: column; /* Column layout for content */
+    flex-grow: 1; /* Allow content to grow */
+    padding-top: 70px; /* Space for fixed header */
+    padding-bottom: 40px; /* Space for footer */
 }
 
 /* Mobile responsiveness */

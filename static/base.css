@@ -1,31 +1,27 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Ensure full width */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+html {
+    background-color: transparent;
 }
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Base styling for header and navigation */
 .navbar {
-    background-color: #3e4a9a; /* Darker shade for the navbar */
-    padding: 10px 0; /* Adjust if needed */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    padding: 5px 0; /* Thin navbar */
     width: 100%;
-    top: 0;
-    z-index: 1000;
-    margin: 0;
+    z-index: 1000; /* Ensure it is on top of other elements */
+    position: relative; /* Relative positioning */
+    top: 0; /* Stick to the top */
+    left: 0; /* Full-width navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    height: 60px; /* Fixed height */
 }
+
+
+body, .navbar-container {
+    background-color: transparent;
+}
+/* Ensure body has padding to avoid content being hidden behind the navbar */
+body {
+    padding-top: 60px; /* Adjust based on your navbar height */
+}
+
 
 .navbar-container {
     display: flex;
@@ -34,24 +30,23 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    background-color: transparent
 }
 
-/* Logo styling */
 .logo img {
-    max-height: 50px;
+    max-height: 50px; /* Keep logo size */
 }
 
-/* Navigation links styling */
 .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding-right: 40px;
-    margin-left: auto; /* Push links to the right */
+    margin-left: auto; /* Aligns the nav links to the right */
 }
 
 .nav-links li {
-    margin-left: 30px; /* Increased spacing between links */
+    margin-left: 30px;
 }
 
 .nav-links a {
@@ -59,27 +54,23 @@ body {
     font-size: 1.1em;
     color: #ffffff;
     padding: 8px 12px;
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
-    color: #f1f1f1;
-    transform: translateY(-2px); /* Lift effect on hover */
+    color: #ffeb3b;
+    transform: scale(1.1);
 }
 
 .nav-links .active a {
-    background-color: rgba(241, 241, 241, 0.3); /* Active state effect */
-    color: #f1f1f1;
-    border-bottom: 2px solid #f1f1f1; /* Active underline */
+    color: #ffeb3b;
+    text-decoration: underline; /* Bold underline for active links */
 }
 
-/* Buttons styling */
 .auth-buttons {
     display: flex;
-    gap: 15px; /* Space between buttons */
-    padding-right: 0px;
+    gap: 15px;
 }
 
 .btn {
@@ -90,89 +81,81 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Login Button */
 .login-btn {
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark text color */
-    border: 2px solid #4a5bb0; /* Border color */
+    background-color: #333c73;
+    color: #ffffff;
+    border: 2px solid #4a5bb0;
 }
 
 .login-btn:hover {
-    background-color: #f0f0f0; /* Light grey on hover */
-    transform: translateY(-2px); /* Lift effect */
+    background-color: #4a5bb0;
+    transform: translateY(-2px);
 }
 
-/* Signup Button */
 .signup-btn {
-    background-color: #4caf50; /* Green background */
-    color: white; /* White text */
-    border: 2px solid #388e3c; /* Darker green border */
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid #388e3c;
 }
 
 .signup-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: translateY(-2px); /* Lift effect */
+    background-color: #45a049;
+    transform: translateY(-2px);
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the wrapper takes the full height of the page */
-}
 
-.content {
-    flex: 1; /* Pushes footer to the bottom when content is small */
-    padding: 80px 20px;
-    box-sizing: border-box;
-}
-
-/* Footer Styling */
 footer {
-    background-color: #2b3a67;
+    background-color: #000000; /* Dark background */
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0; /* Adjust padding for a thinner footer */
     width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 0.8em; /* Font size */
     margin: 0;
-    position: relative;
+    position: relative; /* Allow it to flow with the document */
+    bottom: 0; /* Not necessary, can be removed */
 }
 
-/* Sponsors Section inside Footer */
+/* Ensure this is set on the main container of your layout */
+.container { /* Adjust based on your actual container class */
+    min-height: 100vh; /* Ensure container takes full height */
+    display: flex; 
+    flex-direction: column; /* Allow footer to be at the end */
+}
+
+.content { /* A class for the content area */
+    flex-grow: 1; /* Allow content to grow and take available space */
+}
+
 footer .sponsors {
-    margin-top: 10px;
+    margin-top: 5px; /* Reduced margin */
 }
 
 footer .sponsors-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Aligns logos vertically */
-    gap: 15px; /* Consistent gap between logos */
+    align-items: center;
+    gap: 10px; /* Reduced gap between logos */
     flex-wrap: wrap;
 }
 
-/* Adjusting Sponsor Logos */
 footer .sponsor-logo {
-    width: 50px; /* Fixed width */
-    height: 44px; /* Fixed height */
-    object-fit: contain; /* Maintain aspect ratio */
+    width: 40px; /* Smaller logos */
+    height: 35px; 
+    object-fit: contain;
     transition: transform 0.3s ease;
-    display: block; /* Ensures block-level for alignment */
-    line-height: 0; /* Prevents extra space below the image */
 }
 
 footer #logo1 {
-    width: 70px; /* Fixed width */
-    height: 65px; /* Fixed height */
-    object-fit: contain; /* Maintain aspect ratio */
-    transition: transform 0.3s ease;
+    width: 60px; /* Adjusted logo1 size */
+    height: 55px;
 }
 
-/* Copyright Line Styling */
 footer .footer-content {
-    margin-top: 20px; /* Space between sponsors and copyright line */
-    color: rgba(255, 255, 255, 0.7); /* Light black color for copyright */
+    margin-top: 10px; /* Reduced space between sponsors and copyright */
+    color: rgba(255, 255, 255, 0.7); 
+    font-size: 0.75em; /* Reduced font size for copyright text */
 }
 
 /* Hover Effects */

@@ -1,73 +1,148 @@
 /* General page styling */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #eaeff7;
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    background-color: #b6cfd0; /* Light background */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
 }
 
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 5px 0; /* Thinner padding */
+    text-align: center; /* Center the text */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stay at the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Main content area styling */
+.content {
+    flex: 1; /* This allows content to grow and push the footer down */
+    padding: 10px 20px; /* Reduced padding for content */
+    display: flex; /* Enable flexbox for the content */
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Form styling */
+form {
+    background-color: #2b2b2b; /* Dark background for the form */
+    padding: 15px; /* Slightly reduced padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 10px; /* Space between the header and form */
+}
+
+/* Heading styling */
 h1 {
     text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em;
-    color: #2b3a67;
+    margin: 10px 0; /* Reduced margin for spacing */
+    font-size: 2.5em; /* Font size */
+    color: #ffffff; /* Header text color */
 }
 
 /* Table Styling */
 table {
     width: 80%;
-    margin: 30px auto;
-    border-collapse: collapse;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
+    margin: 100px auto; /* Center table and reduce margin */
+    border-collapse: collapse; /* Collapse borders */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Box shadow */
+    background-color: #2b2b2b; /* Dark table background */
+    color: #ffffff; /* Table text color */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip content around rounded corners */
+    border: 2px solid #4a4a4a; /* Border around the table */
 }
 
 th, td {
-    padding: 15px;
-    text-align: left;
+    padding: 12px; /* Reduced padding for cells */
+    text-align: left; /* Align text to left */
 }
 
 th {
-    background-color: #5c6bc0;
-    color: #ffffff;
-    font-size: 1.2em;
-    border-bottom: 3px solid #b2c1ff;
+    background-color: #4a4a4a; /* Darker header */
+    color: #ffffff; /* Header text color */
+    font-size: 1.2em; /* Header font size */
+    border-bottom: 3px solid #7a7a7a; /* Border */
+    text-transform: uppercase; /* Uppercase headers */
+    letter-spacing: 0.05em; /* Slightly spaced letters */
 }
 
 td {
-    border-bottom: 1px solid #dee2f2;
-    font-size: 1.1em;
-    color: #4f5b8a;
+    border-bottom: 1px solid #555555; /* Cell bottom border */
+    font-size: 1.1em; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 /* Zebra striping for table rows */
 tr:nth-child(even) {
-    background-color: #f5f7ff;
+    background-color: #3a3a3a; /* Even row background */
 }
 
+/* Row hover effect */
 tr:hover {
-    background-color: #dbe1ff;
-    cursor: pointer;
+    background-color: #575757; /* Lighten on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* First column bold */
+tr td:first-child {
+    font-weight: bold; /* Bold font for first column */
+}
+
+/* Second column bold */
+tr td:nth-child(2) {
+    font-weight: bold; /* Bold font for second column */
+}
+
+/* Row border styling */
+tr td {
+    border-right: 1px solid #555555; /* Add borders between cells */
+}
+
+tr td:last-child {
+    border-right: none; /* Remove right border from the last cell */
+}
+
+/* Cell hover effect */
+td:hover {
+    background-color: #666666; /* Subtle cell hover effect */
 }
 
 /* Table row styling */
-tr td:first-child {
-    font-weight: bold;
-    color: #2b3a67;
+tr:hover td {
+    background-color: #4a4a4a; /* Slightly darken all cells on row hover */
+}
+
+/* Sticky footer */
+footer {
+    background-color: #000000; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adjust padding for a thinner footer */
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 0.8em; /* Font size */
+    margin: auto;
+    position: relative; /* Allow it to flow with the document */
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     table {
-        width: 100%;
+        width: 100%; /* Full width on small screens */
     }
 
     th, td {
-        padding: 10px;
-        font-size: 0.9em;
+        padding: 10px; /* Padding for smaller screens */
+        font-size: 0.9em; /* Smaller font size */
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 2em; /* Smaller header on small screens */
     }
 }

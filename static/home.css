@@ -1,87 +1,156 @@
-/* Overall page and container styling */
-.options-container {
+html {
+    background-color: transparent;
+}
+
+/* Global styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    background-color: transparent; /* Dark background for the website */
+    color: #ffffff; /* White text for readability */
+}
+
+/* Background area */
+.background-area {
+    padding-top: 120px;
+    padding-bottom: 80px; /* Space between navbar and heading */
+    position: relative; 
+    height: 400px; /* Adjust as needed */
+    background-image: url(images/image.png); /* Update to your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    z-index: 0;
+    margin-top: -65px;
+
+}
+
+/* Overlay for background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent overlay */
+    z-index: 1; /* Place it above the background but below the heading */
+}
+
+/* Heading */
+/* Heading */
+.heading {
+    font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+    font-size: 1.6em; 
+    position: absolute; /* Use absolute positioning to freely move the heading */
+    z-index: 2; /* Place it above the overlay */
+    top: 50%; /* Vertically center it (adjust if necessary) */
+    left: 5%; /* Push it towards the white area on the left side */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    color: #4a90e2; /* High contrast yellow color */
+    text-align: left; /* Align text to the left */
+    line-height: 1.5;
+    max-width: 40%; /* Set the max width for the heading */
+    word-wrap: break-word;
+}
+
+
+/* Wrapper to control options layout after the image */
+.options-wrapper {
+    background-color:#b6cfd0; /* High contrast background color */
     padding: 20px;
 }
 
-/* Each option block styling */
-.option-block {
+.options-container {
     display: flex;
-    flex-direction: row;
-    background-color: #f4f4f9;
-    border: 1px solid #dcdce6;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    flex-direction: column; /* Align option blocks vertically */
+    gap: 20px; /* Space between blocks */
 }
 
-/* Image on the left side */
+.option-block {
+    display: flex; /* Use Flexbox */
+    background-color:#333 ; /* Dark background for high contrast */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    align-items: stretch; /* Ensure all items stretch to the height of the block */
+    margin-bottom: 20px; /* Space between option blocks */
+    height: 150px; /* Fixed height for uniformity */
+    border-color: #c7c080;
+}
+
+/* Left, Middle, and Right Side Adjustments */
+.left-side {
+    flex: 1; /* Take up 1/3 of the space */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.middle-side {
+    flex: 2; /* Take up more space */
+    padding: 0 20px; /* Padding for middle content */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out content evenly */
+}
+
+.right-side {
+    flex: 1; /* Take up 1/3 of the space */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out content evenly */
+    align-items: flex-end; /* Align items to the right */
+}
+
+/* Image and Text Adjustments */
 .option-block img {
-    max-width: 150px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
+    width: 150px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    margin-left: 0; /* Remove left margin */
+    align-self: flex-start; /* Align image to the start of the block */
 }
 
-/* Text content inside the option block */
 .option-block h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #2b3a67;
+    color: #ecf009; /* Heading text color */
+    margin: 0; /* Remove default margin */
+}
+
+.option-block h2 {
+    color: #ecf009; /* ID text color */
+    margin: 0; /* Remove default margin */
 }
 
 .option-block p {
-    font-size: 1.1em;
-    color: #555555;
-    flex-grow: 1;
-}
-
-/* ID in the top-right corner */
-.option-block h2 {
+    color: #ffffff; /* Description text color */
+    font-family: 'Montserrat', sans-serif; 
     font-size: 1.2em;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: #ff4c60;
-    font-weight: bold;
 }
 
-/* Read More link */
 .option-block a {
-    color: #5c6bc0;
-    font-size: 1.1em;
-    text-decoration: none;
-    margin-top: 10px;
-    transition: color 0.3s ease;
+    color: #f0f0f0; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal;
 }
 
 .option-block a:hover {
-    color: #3949ab;
+    text-decoration: underline; /* Underline on hover */
+    color: yellow;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .option-block {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .option-block img {
-        width: 100%;
-        margin: 0 0 15px 0;
-    }
-
-    .option-block h2 {
-        position: static;
-        margin-top: 10px;
-        align-self: flex-end;
-    }
+/* Footer Styling */
+footer {
+    background-color: #000000; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Reduced padding */
+    width: 100%;
+    position: relative; /* Change as needed for footer positioning */
+    bottom: 0; /* Align footer at the bottom */
 }

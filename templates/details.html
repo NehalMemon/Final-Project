@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Details page{% endblock %}
+{% block title %}Details Page{% endblock %}
 
 {% block extra_css %}
 {% load static %}
@@ -8,16 +8,38 @@
 {% endblock %}
 
 {% block content %}
+<p class="note">Note: please remember the ID of the car you want to vote.</p>
 <div class="details-container">
-    <img src="{{ data.image.url }}" alt="{{ data.name }} Image" class="detail-image">
-    <p class="note">Note: please remember the ID of the product you want to vote.</p>
-    <h3 class="detail-name">{{ data.name }}</h3>
-    <h2 class="detail-id">ID: {{ data.id }}</h2>
-    <div class="detail-description">
-        <p>{{ data.dis2 | safe }}</p>
+    <div class="overall-description">
+        <img src="{{ data.main_img.url }}" alt="{{ data.name }} Image" class="detail-image">
+        <h3 class="detail-name">{{ data.name }}</h3>
+        <h2 class="detail-id">ID: {{ data.id }}</h2>
+        <p class="description-text">{{ data.Overall_des | safe }}</p>
+    </div>
+
+    <div class="exterior-description">
+        <div class="image-group">
+            <img src="{{ data.Exterior_img1.url }}" alt="{{ data.name }} Exterior 1" class="detail-image">
+            <img src="{{ data.Exterior_img2.url }}" alt="{{ data.name }} Exterior 2" class="detail-image">
+        </div>
+        <p class="description-text">{{ data.Exterior_des | safe }}</p>
+    </div>
+
+    <div class="interior-description">
+        <div class="image-group">
+            <img src="{{ data.interior_img1.url }}" alt="{{ data.name }} Interior 1" class="detail-image">
+            <img src="{{ data.interior_img2.url }}" alt="{{ data.name }} Interior 2" class="detail-image">
+        </div>
+        <p class="description-text">{{ data.Interior_des | safe }}</p>
+    </div>
+    <div class="statement-button">
+    <div class="statement">
+        To register your vote now, click on
     </div>
     <div class="buttons">
         <a href="{% url 'vote' %}" class="btn vote-btn">Vote</a>
     </div>
 </div>
+</div>
 {% endblock %}
+

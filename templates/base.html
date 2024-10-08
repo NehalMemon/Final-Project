@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>{% block title %}My Website{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'base.css' %}">
@@ -55,11 +56,23 @@
             </div>
         </div>
         <div class="footer-content">
-            <p>© 2024 Your Company</p>
+            <p>© 2024 NM Polling Site</p>
         </div>
         
     </footer>
     
-  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get all <p> tags inside the description
+            let descriptions = document.querySelectorAll('.middle-side p');
+    
+            descriptions.forEach(function(p) {
+                // If the <p> tag is empty or contains only whitespace, remove it
+                if (!p.textContent.trim()) {
+                    p.remove();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

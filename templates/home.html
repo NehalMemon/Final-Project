@@ -1,28 +1,46 @@
 {% extends 'base.html' %}
 
 {% block title %}N & M Polling Site{% endblock %}
+
 {% block extra_css %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'home.css' %}">
 {% endblock %}
 
-
-
 {% block content %}
-{% load static %}
+<div class="background-area"> 
+    <div class="overlay"></div> <!-- Overlay for background image -->
+    <div class="heading">
+      <h2> Welcome to the N & M Polling Site! <br>
+        Your Opinion Matters: <br>
+        Share Your Thoughts and Shape Our Community!</h2>
+    </div>
+</div>
+
+<div class="options-wrapper">
     <div class="options-container">
         {% for n in data %}
         <div class="option-block">
-            {% if n.image %}
-                <img src="{{ n.image.url }}" alt="{{ n.name }} Image">
-            {% else %}
-                <img src="{% static 'images/default.jpg' %}" alt="Default Image">
-            {% endif %}
-            <h3>{{ n.name }}</h3>
-            <h2>ID:{{ n.id }}</h2>
-            <p>{{ n.dis1 | safe }}</p>
-            <a href="/detail-page/{{n.slugs}}">Read More</a>
+            <div class="left-side">
+                <h3>{{ n.name }}</h3>
+                {% if n.main_img %}
+                    <img src="{{ n.main_img.url }}" alt="{{ n.name }} Image" class="option-image">
+                {% else %}
+                    <img src="{% static 'images/default.png' %}" alt="Default Image" class="option-image">
+                {% endif %}
+               
+            </div>
+            <div class="middle-side">
+                {% if n.Homepage_des|striptags|length > 0 %}
+                <p>{{ n.Homepage_des|safe }}</p>
+            {% endif %}        
+            </div>
+            <div class="right-side">
+                <h2>ID: {{ n.id }}</h2>
+                <a href="/detail-page/{{n.slugs}}" class="read-more">Details</a>
+            </div>
         </div>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
