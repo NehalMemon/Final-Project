@@ -17,6 +17,10 @@ class poll(models.Model):
     count = models.IntegerField(default=0)
     slugs=AutoSlugField(populate_from='name', unique=True , null=True , default=None)
     
+class Formdata(models.Model):
+    name=models.CharField(max_length=50, blank=True, null=True)
+    email=models.EmailField(max_length=254)
+    selected_id = models.CharField(max_length=50)
     
 
     

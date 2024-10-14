@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Voting page{% endblock %}
+{% block title %}IN POLLS|Voting page{% endblock %}
 
 {% block extra_css %}
 {% load static %}
@@ -10,6 +10,12 @@
 {% block content %}
     <div class="form-container">
         <h1>Voting Form</h1>
+        
+        <!-- Display the error message if it exists -->
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
         {% csrf_token %}
         <form action="" method="post">
             <label for="name">Name:</label>
